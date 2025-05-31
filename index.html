@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+    <!-- Page Heading -->
+    <h1 id="title">User Experience Feedback Survey</h1>
+    <p id="description">We value your opinion! Please take a moment to fill out this short Survey</p>
+
+    <!-- Survey Form Starts -->
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+
+      <!-- User Details Section -->
+      <fieldset>
+        <label id="name-label">
+          Enter your name:
+          <input id="name" type="text" placeholder="John Doe" required>
+        </label>
+
+        <label id="email-label">
+          Enter your email:
+          <input id="email" type="email" placeholder="abc@gmail.com" required>
+        </label>
+
+        <label id="number-label">
+          Enter your age:
+          <input id="number" type="number" min="18" max="30" placeholder="age between 18 to 30" required>
+        </label>
+
+        <!-- Gender Selection -->
+        <legend>Select your gender</legend>
+        <label for="female">
+          <input class="inline" id="female" type="radio" name="gender" value="female" checked>female
+        </label>
+        <label for="male">
+          <input class="inline" id="male" type="radio" name="gender" value="male">male
+        </label>
+        <label for="other">
+          <input class="inline" id="other" type="radio" name="gender" value="other">prefer not to say
+        </label>
+      </fieldset>
+
+      <!-- Platform Feedback Section -->
+      <fieldset>
+        <label>
+          Select your learning platform
+          <select id="dropdown">
+            <option>select one</option>
+            <option>freeCodeCamp</option>
+            <option>Unstop</option>
+            <option>Coursera</option>
+            <option>HackerRank</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Share your experience with the platform:
+          <textarea rows="5" placeholder="I would prefer this platform for coding."></textarea>
+        </label>
+      </fieldset>
+
+      <!-- Agreement Section -->
+      <fieldset>
+        <label>
+          <input class="inline" type="checkbox" value="opinion">I had shared my genuine opinion.
+        </label>
+        <label>
+          <input class="inline" type="checkbox" value="conditions" required>I agree to the terms and conditons.
+        </label>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button id="submit" type="submit">Submit</button>
+    </form>
+    <!-- Survey Form Ends -->
+
+  </body>
+</html>
